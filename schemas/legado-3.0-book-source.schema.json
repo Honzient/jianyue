@@ -1,0 +1,530 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:jianyue:legado-3.0-book-source",
+  "title": "Legado 3.0 书源导出格式",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/bookSource"
+    },
+    {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/bookSource"
+      }
+    }
+  ],
+  "$defs": {
+    "bookSource": {
+      "type": "object",
+      "required": [
+        "bookSourceUrl",
+        "bookSourceName"
+      ],
+      "properties": {
+        "bookSourceUrl": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "bookSourceName": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "bookSourceGroup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bookUrlPattern": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "jsLib": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "concurrentRate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "loginUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "loginUi": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "loginCheckJs": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coverDecodeJs": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bookSourceComment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "variableComment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "exploreUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "exploreScreen": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "searchUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mainJs": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "enabledExplore": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "enabledCookieJar": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "eventListener": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "customButton": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "bookSourceType": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "customOrder": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "lastUpdateTime": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "respondTime": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "weight": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "header": {
+          "type": [
+            "string",
+            "object",
+            "null"
+          ]
+        },
+        "ruleSearch": {
+          "$ref": "#/$defs/ruleSearch"
+        },
+        "ruleExplore": {
+          "$ref": "#/$defs/ruleExplore"
+        },
+        "ruleBookInfo": {
+          "$ref": "#/$defs/ruleBookInfo"
+        },
+        "ruleToc": {
+          "$ref": "#/$defs/ruleToc"
+        },
+        "ruleContent": {
+          "$ref": "#/$defs/ruleContent"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ruleSearch": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "bookList": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intro": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lastChapter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coverUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bookUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "wordCount": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checkKeyWord": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "ruleExplore": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "bookList": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intro": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lastChapter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coverUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bookUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "wordCount": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "ruleBookInfo": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "init": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intro": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lastChapter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coverUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tocUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "wordCount": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canReName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "ruleToc": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "chapterList": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chapterName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chapterUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isVolume": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isVip": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isPay": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "updateTime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nextTocUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "preUpdateJs": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "formatJs": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "ruleContent": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "content": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nextContentUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "webJs": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceRegex": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "replaceRegex": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "imageStyle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "imageDecode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payAction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

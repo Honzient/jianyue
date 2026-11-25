@@ -1,0 +1,11 @@
+.hvigor/
+**/build/
+oh_modules/
+**/oh_modules/
+.idea/
+local.properties
+*.hap
+*.hsp
+*.app
+*.p12
+*.p7b
